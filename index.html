@@ -21,7 +21,7 @@ async function doIt() {
         <p>
             <a href="https://en.wikipedia.org/?curid=${wikiresult.tfa.pageid}">${wikiresult.tfa.title}</a>
         <br>
-        ${wikiresult.tfa.description}
+        ${wikiresult.tfa.extract_html}
         <img src="${wikiresult.tfa.thumbnail.source}" />
     `
 }
