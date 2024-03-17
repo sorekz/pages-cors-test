@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+async function doIt() {
+	const response = await fetch("https://api.github.com/licenses")
+    const licenses = await response.json()
+	document.getElementById('result').innerHTML = `
+    	<h3>Github Commonly used licenses:</h3>
+    	<ul>
+        	${licenses.map(l => '<li>'+l.name).join('')}
+        </ul>
+    `
+}
+</script>
+
+<h1>The button Element</h1>
+
+<button type="button" onclick="doIt()">Click Me!</button>
+<p>
+<div id="result"></div>
+
+ 
+</body>
+</html>
